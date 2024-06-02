@@ -1,0 +1,515 @@
+/* Reinitialisation des bordures du navigateur */
+*,
+::before,
+::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Barre de navigation */
+nav a {
+    display: inline-block;
+    color: #333;
+    font-size: 20px;
+    text-decoration: none;
+    padding-top: 10px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 900;
+
+}
+
+/* zone de selection de la barre de navigation */
+a {
+    width: 300px;
+    height: 45px;
+    text-align: center;
+}
+
+/* Changement de la couleur au survol d'une des zones de selection */
+a:hover {
+    background-color: #ccc;
+}
+
+/*Taille et position de la barre de nav*/
+nav {
+    width: 100%;
+    background: #f1f1f1;
+    display: flex;
+    justify-content: center;
+}
+
+/*Header*/
+.header {
+    display: inline-block;
+    height: 255px;
+    width: 100%;
+}
+
+/*Fond du header*/
+.bgheader {
+    display: inline-block;
+    height: 250px;
+    width: 100%;
+}
+
+.logo-container {
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.logo {
+    max-width: 400px;
+    height: auto;
+}
+
+/*Bloc contenant la photographe et le a propos*/
+.whyphoto {
+    display: flex;
+    width: 100%;
+    height: 550px;
+    align-items: center;
+    justify-content: center;
+}
+
+/*Bloc contenant la photographe*/
+.photographe {
+    display: inline-block;
+    height: 450px;
+    width: 380px;
+    margin-left: 1%;
+}
+
+/*Bloc contenant le a propos*/
+.why {
+    display: inline-block;
+    left: 30%;
+    height: 450px;
+    width: 380px;
+    background-color: #ccc;
+    margin-right: 1%;
+}
+
+/*bloc du a propos*/
+.apropos {
+    margin-top: 5%;
+    display: inline-block;
+    position: relative;
+    padding-top: 2%;
+    padding-left: 40%;
+    font-family: 'Roboto', sans-serif;
+    font-size: small;
+}
+
+/* Titre h3 : Pourquoi choisir Escapade*/
+.premierh3 {
+    display: inline-block;
+    text-align: center;
+    position: relative;
+    padding-top: 10%;
+    padding-left: 15%;
+    padding-right: 10%;
+    font-family: 'Roboto', sans-serif;
+}
+
+/*Paragraphe sous h3*/
+.pph3 {
+    display: inline-block;
+    padding-top: 5%;
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+    letter-spacing: 1px;
+    line-height: 25px;
+}
+
+/*Decouvrir notre histoire*/
+.nous {
+    display: inline-block;
+    margin-top: 20px;
+    margin-left: 40px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+    letter-spacing: 1px;
+    border-top: 1px solid;
+    border-bottom: 1px solid;
+    width: 80%;
+}
+
+/*Les 4 container pour chaque catégorie*/
+.location-container,
+.hebergement-container,
+.inspiration-container,
+.cadeaux-container {
+    position: relative;
+    background-color: #333;
+    left: 38%;
+    top: -15%;
+    width: 52px;
+    height: 52px;
+}
+
+/*Les 4 SVG des container*/
+.locationsvg,
+.hebergementsvg,
+.inspirationsvg,
+.cadeauxsvg {
+    position: relative;
+    top: 10%;
+    width: 20px;
+    height: 40px;
+
+}
+
+/*Changement de la couleur des SVG en blanc*/
+#styleicon {
+    fill: white;
+}
+
+/*Container principal qui contient tout les svg, le paragraphe et les 4 plus petit container*/
+.container {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-image: url("/bg_offre.jpg");
+}
+
+/*Container de l'image de fond*/
+.bgoffre {
+    position: relative;
+    width: 100%;
+    margin-top: 20px;
+}
+
+/*Image de fond*/
+.bgoffre img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+}
+
+/*Container sur l'image*/
+.content {
+    position: absolute;
+    height: 200px;
+    width: auto;
+    top: 20px;
+    left: 10px;
+    right: 10px;
+}
+
+/*Paragraphe*/
+.pbg {
+    margin-top: 1%;
+    font-family: 'Roboto', sans-serif;
+    line-height: 25px;
+
+}
+
+/*Container des 4 carrés*/
+.c-container {
+    position: absolute;
+    top: 200px;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+}
+
+/*Les 4 carrés*/
+.c1,
+.c2,
+.c3,
+.c4 {
+    width: 200px;
+    height: 200px;
+    background-color: #ffbc2c;
+    margin: 0 20px;
+}
+
+/*Changement de couleur au survol d'un des carré*/
+.c1:hover,
+.c2:hover,
+.c3:hover,
+.c4:hover {
+    background-color: #8da881;
+}
+
+/*Changement de la couleur et suprression des bordures du texte au survol */
+.c1:hover .destination,
+.c2:hover .hebergement,
+.c3:hover .inspiration,
+.c4:hover .cadeaux {
+    background-color: white;
+    border-top: 0px;
+    border-bottom: 0px;
+
+}
+
+/*Animation au survol*/
+.c1:hover .location-container,
+.c2:hover .hebergement-container,
+.c3:hover .inspiration-container,
+.c4:hover .cadeaux-container {
+    animation: move-in 500ms;
+    transform: translateY(50px);
+}
+
+/*Animation Descente*/
+@keyframes move-in {
+    0% {
+        transform: translateY(0px);
+    }
+
+    100% {
+        transform: translateY(50px);
+    }
+}
+
+
+/*Box qui contient la petite phrase en bas des carré*/
+.box-content {
+    margin-top: 20%;
+}
+
+/*Mise en forme des texte en majuscule dans les carré*/
+.destination,
+.hebergement,
+.inspiration,
+.cadeaux {
+    margin-top: 20%;
+    margin-left: 10%;
+    border-top: 1px solid;
+    border-bottom: 1px solid;
+    width: 80%;
+    height: 20px;
+}
+
+/*Bloc de la partie avis*/
+.avis {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    height: 600px;
+    background-color: rgb(245, 236, 236);
+}
+
+/*Tête du bloc avis*/
+.headavis {
+    text-align: center;
+    justify-content: center;
+    margin-top: 200px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 1000;
+}
+
+/*Bloc apostrophe gauche*/
+.apogauche {
+    position: absolute;
+    left: 30%;
+    top: 50%;
+
+}
+
+/*Bloc apostrophe droite*/
+.apodroite {
+    position: absolute;
+    top: 50%;
+    right: 30%;
+}
+
+/*Commentaire de jerome*/
+.jeromecom {
+    position: absolute;
+    margin-top: 10px;
+    right: -340%;
+    top: 50px;
+    width: 350px;
+    font-style: italic;
+    font-family: 'Roboto', sans-serif;
+}
+
+/*Nom de jerome*/
+.jerome {
+    position: absolute;
+    top: 120px;
+    right: -150%;
+    width: 200px;
+    color: #6d8b60;
+    font-family: 'Roboto', sans-serif;
+}
+
+/*Commentaire de christine*/
+.christinecom {
+    position: absolute;
+    margin-top: 10px;
+    left: -275%;
+    top: 50px;
+    width: 350px;
+    font-style: italic;
+    font-family: 'Roboto', sans-serif;
+}
+
+/*Nom de christine*/
+.christine {
+    position: absolute;
+    top: 120px;
+    right: -200%;
+    width: 200px;
+    color: #6d8b60;
+    font-family: 'Roboto', sans-serif;
+
+}
+
+/*footer*/
+.content-footer {
+    background-color: #8da881;
+    width: 100%;
+    height: 600px;
+    text-align: center;
+    position: relative;
+}
+
+/*Texte en blanc dans le footer*/
+.footerdesc {
+    position: absolute;
+    color: white;
+    left: 25%;
+    top: 50px;
+    text-align: center;
+    justify-content: center;
+    width: 800px;
+}
+
+.content-footer div {
+    display: inline-block;
+    vertical-align: top;
+    margin: 0 10px;
+}
+
+/*container orange avec la premiere image dedans*/
+.domediv {
+    position: absolute;
+    top: 20%;
+    left: 20%;
+    width: 218px;
+    height: 425px;
+    background-color: orange
+}
+
+/*container orange avec la deuxieme image dedans*/
+.roulottediv {
+    position: absolute;
+    top: 20%;
+    left: 35%;
+    width: 218px;
+    height: 425px;
+    background-color: orange
+}
+
+/*container orange avec la troisieme image dedans*/
+.cabannediv {
+    position: absolute;
+    top: 20%;
+    left: 65%;
+    width: 218px;
+    height: 425px;
+    background-color: orange
+}
+
+/*container orange avec la quatrieme image dedans*/
+.tipidiv {
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    width: 218px;
+    height: 425px;
+    background-color: orange
+}
+
+/*Positionnement des images*/
+.dome,
+.roulotte,
+.cabanne,
+.tipi {
+    top: 20%;
+    width: 218px;
+    height: 360px;
+    object-fit: cover;
+}
+
+/*Changement de la police de titre h4*/
+h4 {
+    font-family: 'Roboto', sans-serif;
+    font-weight: bolder;
+}
+
+
+
+/* Responsive */
+
+
+/* ----768---- */
+
+@media screen and (max-width:768px){
+    body{
+        /* background-color: yellow; */
+    }
+    nav a{
+        font-size: 15px;
+    }
+}
+
+
+/* ----320---- */
+
+@media screen and (max-width:384px){
+    nav{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav a {
+        display: flex;
+        flex-direction: column;
+        color: #333;
+        font-size: 15px;
+        text-decoration: none;
+        font-weight: 900;
+    
+    }
+    .logo{
+        width: 80%;
+        height: 60px;
+        left: 10%;
+        top: 28%;
+    }
+    .whyphoto{
+        display: flex;
+        flex-direction: column;
+    }
+    .why, .apropos{
+        width: 100%;
+        height: auto;
+        margin: 10px;
+    }
+    .photographe{
+        width: 50vh;
+        height: 200vw;
+    }
+    .container{
+        display: flex;
+        flex-direction: column;
+        height: 500px;
+        background-image:url(/bg_offre.jpg)
+    }
+    .bgoffre{
+        position:relative;
+        height: 500px;
+    }
+}
