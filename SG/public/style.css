@@ -1,0 +1,21 @@
+table {
+    border-collapse: collapse;
+    width: 100%;
+  }
+
+  table th,table td {
+    border: 1px solid var(--text-color);
+    /* Change the border color to your preference */
+    padding: 10px;
+    text-align: center;
+    font-weight: 400;
+  }
+  table th img,table td img {
+  width: 60px;
+}
+table th {
+  background-color: var(--dark);
+  /* Change the background color of the header row */
+  color: var(--text-color-light);
+}
+  
